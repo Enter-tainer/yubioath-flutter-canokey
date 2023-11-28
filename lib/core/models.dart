@@ -85,12 +85,10 @@ enum UsbPid {
   yk4OtpCcid,
   @JsonValue(0x0406)
   yk4FidoCcid,
-  @JsonValue(0x0407)
+  @JsonValue(0x42D4)
   yk4OtpFidoCcid,
   @JsonValue(0x0410)
-  ykpOtpFido,
-  @JsonValue(0x42D4)
-  canokeyOtpFidoCcid;
+  ykpOtpFido;
 
   int get value => _$UsbPidEnumMap[this]!;
 
@@ -108,7 +106,6 @@ enum UsbPid {
       UsbPid.yksOtp => 'YubiKey Standard',
       UsbPid.ykpOtpFido => 'YubiKey Plus',
       UsbPid.skyFido => 'Security Key by Yubico',
-      UsbPid.canokeyOtpFidoCcid => 'Canokey Pigeon',
       _ => defaultName(),
     };
   }
